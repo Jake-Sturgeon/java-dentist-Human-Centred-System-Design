@@ -48,7 +48,7 @@ class ViewPatientOutstanding extends JDialog {
         contentPanel.setLayout(null);
 
         JLabel lblPatientID = new JLabel("Patient ID: "+patientID);
-        lblPatientID.setBounds(40, 35, 75, 20);
+        lblPatientID.setBounds(40, 35, 100, 20);
         contentPanel.add(lblPatientID);
         
         
@@ -79,7 +79,7 @@ class ViewPatientOutstanding extends JDialog {
             scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
             recordOwedPanel.add(scrollPane);
             
-            RecordQueries.generateOutstandingList(patientID,box,textField);   
+            RecordQueries.generateOutstandingList(patientID,box,textField);
         
         
             JButton btnUpdateCostOwed = new JButton("Update Cost Owed");
@@ -108,7 +108,7 @@ class ViewPatientOutstanding extends JDialog {
 	            	box.remove(comp);
 	            }   
 	            scrollPane.repaint();
-	            RecordQueries.generateOutstandingList(patientID,box,textField); 
+	            RecordQueries.generateOutstandingList(patientID,box,textField);
             });
             btnUpdateCostOwed.setBounds(298, 506, 186, 23);
             contentPanel.add(btnUpdateCostOwed);
